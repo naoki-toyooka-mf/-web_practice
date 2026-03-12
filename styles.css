@@ -71,3 +71,16 @@ input[type="text"]:focus,
 textarea:focus {
     border-color: #3182ce;
     box-shadow: 0 0 0 3px rgba(66, 1
+
+                               /* ボタンを横幅いっぱい、または中央に配置する場合の例 */
+.button-group {
+    margin-top: 30px;
+    text-align: center; /* 中央寄せにする場合 */
+}
+
+.submit-btn {
+    width: 100%; /* スマホなどでは横幅いっぱいにすると押しやすい */
+    max-width: 300px; /* 広がりすぎ防止 */
+    /* ... 他のスタイルはそのまま ... */
+}
+
