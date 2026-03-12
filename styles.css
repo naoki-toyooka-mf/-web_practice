@@ -1,0 +1,90 @@
+/* --- 1. 基本設定（リセット・共通） --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* サイズ計算を楽にする設定 */
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* --- 2. レイアウト（全体構造） --- */
+header {
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between; /* ロゴとナビを左右に振る */
+    align-items: center;
+    position: sticky; /* スクロールしても上についてくる */
+    top: 0;
+    z-index: 100;
+}
+
+main {
+    max-width: 900px;
+    margin: 40px auto; /* 中央寄せ */
+    padding: 0 20px;
+    min-height: 80vh; /* コンテンツが少なくてもフッターを下に押し下げる */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+
+/* --- 3. ナビゲーション --- */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* メニューの間隔 */
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #007bff; /* ホバー時に青くする */
+}
+
+/* --- 4. コンテンツ内の装飾 --- */
+section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #007bff;
+}
+
+/* --- 5. スマホ対応（メディアクエリ） --- */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column; /* 縦並びにする */
+        text-align: center;
+    }
+    
+    nav ul {
+        margin-top: 15px;
+    }
+}
