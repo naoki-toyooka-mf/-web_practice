@@ -9,105 +9,65 @@ body {
     font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f5f7fa;
+    background-color: #f5f7fa; /* 薄いグレーで清潔感を出す */
     padding: 20px;
 }
 
-/* --- ヘッダー・メイン・フッターのコンテナ設定 --- */
+/* --- レイアウトコンテナ --- */
 header, main, footer {
-    max-width: 600px; /* フォームに適した横幅に設定 */
-    margin: 0 auto; /* 中央寄せ */
+    max-width: 600px; /* フォームが広がりすぎない最適な幅 */
+    margin: 0 auto;
     padding: 20px 0;
 }
 
-/* --- ヘッダーの装飾 --- */
+/* --- ヘッダー --- */
 header h1 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    font-weight: bold;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    color: #2d3748;
 }
 
 header p {
-    color: #666;
-    font-size: 0.95rem;
+    color: #718096;
+    font-size: 1rem;
+    margin-bottom: 10px;
 }
 
-/* --- メインコンテンツ（フォーム本体）の装飾 --- */
+/* --- フォーム本体 --- */
 .bug-form {
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px; /* 少し丸みを強くしてモダンに */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
+/* --- 入力要素のグループ（ここが「上部表示」のキモ） --- */
 .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 .form-group label {
-    display: block; /* ラベルを単独の行にする */
-    margin-bottom: 8px;
+    display: block;      /* 完全に一行を使わせることで、入力を下に押し出す */
+    margin-bottom: 10px; /* ラベルと入力欄の間の余白 */
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    color: #4a5568;
 }
 
-/* 入力ボックス（input/textarea）の共通設定 */
+/* 入力ボックス（input/textarea） --- */
 input[type="text"],
 textarea {
     width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
+    padding: 14px;
+    border: 1.5px solid #e2e8f0; /* 枠線を少し太くしてはっきりと */
+    border-radius: 8px;
     font-size: 1rem;
     outline: none;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    transition: all 0.2s ease;
 }
 
-/* 入力中（フォーカス時）の装飾 */
+/* 入力中（フォーカス時） --- */
 input[type="text"]:focus,
 textarea:focus {
     border-color: #3182ce;
-    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
-}
-
-/* テキストエリア固有の設定 */
-textarea {
-    resize: vertical; /* 縦方向のみリサイズ可能に */
-}
-
-/* ボタン配置のコンテナ */
-.button-group {
-    text-align: left; /* 画像と同様に左寄せに */
-    margin-top: 10px;
-}
-
-/* 判定ボタンの装飾 */
-.submit-btn {
-    background-color: #3182ce;
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.1s;
-}
-
-.submit-btn:hover {
-    background-color: #2b6cb0;
-}
-
-.submit-btn:active {
-    transform: scale(0.98); /* クリック時の沈む演出 */
-}
-
-/* --- フッターの装飾 --- */
-footer {
-    border-top: 1px solid #eaeaea;
-    margin-top: 40px;
-    padding-top: 20px;
-    text-align: center;
-    color: #888;
-    font-size: 0.85rem;
-}
+    box-shadow: 0 0 0 3px rgba(66, 1
