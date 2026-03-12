@@ -3,19 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>タイトルを入力</title>
+    <title>不具合重要度自動判定テスト</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>サイト名</h1>
+        <h1>不具合重要度自動判定</h1>
         <nav>
-            <ul>
-                <li><a href="#">ホーム</a></li>
-                <li><a href="#">サービス</a></li>
-                <li><a href="#">お問い合わせ</a></li>
-            </ul>
+<section>
+    <h2>お問い合わせ・入力</h2>
+    <form action="#" method="post" class="form-container">
+        <div class="form-group">
+            <label for="username">お名前</label>
+            <input type="text" id="username" name="username" placeholder="例：山田 太郎" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">メールアドレス</label>
+            <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="message">メッセージ</label>
+            <textarea id="message" name="message" rows="5" placeholder="内容を入力してください"></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">送信する</button>
+    </form>
+</section>
         </nav>
     </header>
 
