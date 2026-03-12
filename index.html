@@ -3,43 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>不具合重要度自動判定テスト</title>
+    <title>不具合重要度自動判定</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <h1>不具合重要度自動判定</h1>
-        <nav>
-<section>
-    <h2>チーム名・起きた不具合の事象を入力してください。</h2>
-    <form action="#" method="post" class="form-container">
-        <div class="form-group">
-            <label for="username">チーム名</label>
-            <input type="text" id="username" name="username" placeholder="例：homehub web" required>
-        </div>
-        <div class="form-group">
-            <label for="message">不具合事象を入力</label>
-            <textarea id="message" name="message" rows="5" placeholder="内容を入力してください"></textarea>
-        </div>
-
-        <button type="submit" class="submit-btn">判定する</button>
-    </form>
-</section>
-        </nav>
+        <p>チーム名・起きた不具合の事象を入力してください。</p>
     </header>
 
     <main>
-        <section>
-            <h2>セクション見出し</h2>
-            <p>ここにコンテンツを入力します。</p>
-        </section>
+        <form action="#" method="post" class="bug-form">
+            <div class="form-group">
+                <label for="team-name">チーム名</label>
+                <input type="text" id="team-name" name="team-name" placeholder="例：homehub web" required>
+            </div>
+
+            <div class="form-group">
+                <label for="bug-issue">不具合事象を入力</label>
+                <textarea id="bug-issue" name="bug-issue" rows="6" placeholder="内容を入力してください" required></textarea>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="submit-btn">判定する</button>
+            </div>
+        </form>
     </main>
 
     <footer>
         <p>&copy; 2026 Your Name</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
